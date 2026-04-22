@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* 🌌 SCROLLBAR CYBER-INDIGO (DARK MODE) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Super tipis dan elegan */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(10, 10, 18, 0.5); /* Tembus pandang */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3); /* Warna Indigo redup */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.8); /* Menyala Violet saat disentuh mouse! */
+}
+
+/* 🌅 SCROLLBAR LIGHT MODE */
+.light-mode .custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(241, 245, 250, 0.7);
+  border-radius: 10px;
+}
+
+.light-mode .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(20, 184, 166, 0.3); /* Warna Teal redup */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.light-mode .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(13, 148, 136, 0.8); /* Menyala Teal saat disentuh */
+}
+
+/* 🖨️ ATURAN MESIN PRINTER THERMAL (80mm) */
+@media print {
+  /* Pastikan kertas selalu putih dan tinta hitam untuk menghemat biaya */
+  body {
+    background-color: white !important;
+    color: black !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Sembunyikan SEMUA elemen selain area struk. 
+     (Ini cadangan keamanan jika print:hidden Tailwind gagal) */
+  nav, main, .latar-kosmik {
+    display: none !important;
+  }
+}
